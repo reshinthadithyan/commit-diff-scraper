@@ -250,8 +250,7 @@ if __name__ == "__main__":
             run_len_count += len(chunked_dataset_processed)
             print(f"Going for sleep, GLOBAL : {run_len_count} {len(chunked_dataset_processed)} rows written... after {file_path_start_ind} chunks... written in {output_file_name}") 
             logger.info(f"Going for sleep, GLOBAL : {run_len_count} {len(chunked_dataset_processed)} rows written... after {file_path_start_ind} chunks... written in {output_file_name}") 
-            if total_clone_count > 1000:
-                time.sleep()
         except:
+            logger.info(f"Error in {ind_file}")
             pass
             
